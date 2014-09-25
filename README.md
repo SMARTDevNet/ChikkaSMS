@@ -1,6 +1,3 @@
-chikkasmsapi
-============
-
 Chikka SMS API
 
 The Chikka SMS API allows you to create SMS-based applications or integrate the service to your existing applications using HTTP POST interface.
