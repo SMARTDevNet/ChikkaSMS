@@ -14,11 +14,11 @@ class Chikka
 						"message" 		=> urlencode($message), 
 						"client_id" 	=> CHIKKA_CLIENT_ID, 
 						"secret_key" 	=> CHIKKA_CLIENT_SECRET );	
-		print_r($post);
+		
 		$result = $this->curl_request(CHIKKA_URL, $post);
 		$result = json_decode($result, true);
 		if ($result['status'] == '200') {
-			$this->writeLog("SEND", TRUE, $mobile_number);
+			$this->writeLog("SEND", TRUE, $mobile_number );
 			return TRUE;
 		} else {
 			$this->writeLog("SEND", FALSE, $result['message'] . "|". $mobile_number);
